@@ -1,0 +1,14 @@
+.editor__code{
+    border: 1px solid black;
+    min-height:300px;
+}
+.output{
+    min-height:150px;
+    border: 1px solid black;
+    margin: 10px 0px;
+    width: 100%;
+}
+.button__layout{
+    margin:10px 0;
+    width: 100%;
+}
