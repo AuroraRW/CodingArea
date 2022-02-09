@@ -78,6 +78,7 @@ const getSubmission = (token)=>{
 }
 const submission = ()=>{
     // Get input from the code editor
+    outputText.value = "Running......."
     const userCode = codeEditor.getValue();
     // Encode with base64
     const encodeUserCode = btoa(userCode)
