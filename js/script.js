@@ -2,10 +2,13 @@
 
 const ececuteCodeBtn = document.getElementById('run')
 const resetCodeBtn = document.getElementById('reset')
+const inputText = document.querySelector('.input')
 const outputText = document.querySelector('.output')
 
+let userSourceCode=""
+
 // Setup Ace
-let codeEditor = ace.edit("editorCode")
+let codeEditor = ace.edit("codeEditor")
 
 let editorLib = {
     init(){
@@ -22,6 +25,10 @@ let editorLib = {
             // enableBasicAutocompletion: true,
             // enableLiveAutocompletion: true,
         })
+        codeEditor.getSession().on("change", function() {
+            userSourceCode=codeEditor.getSession().getValue()
+            // console.log(`editor input is: ${codeEditor.getSession().getValue()}`)
+          })
     }
 }
 
@@ -77,15 +84,16 @@ const getSubmission = (token)=>{
       });
 }
 const submission = ()=>{
-    // Get input from the code editor
     outputText.value = "Running......."
-    const userCode = codeEditor.getValue();
+    // Get input from the code editor
+    const userInput = inputText.value
     // Encode with base64
-    const encodeUserCode = btoa(userCode)
+    const encodeUserCode = btoa(userSourceCode)
+    let encodeUserInput = btoa(userInput)
     const data = JSON.stringify({
         "language_id": 71,
         "source_code": encodeUserCode,
-        // "stdin": "SnVkZ2Uw"
+        "stdin": encodeUserInput
     });
     createSubmission(data)
     

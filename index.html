@@ -12,29 +12,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Python Quiz</h1>
-        <h3>Quesion: Print number 1 to 10 using loops</h3>
+        <h3 class="title">Python Quiz</h3>
+        <h5>Write a program that takes an integer as input from user and prints the squre of that number </h5>
         <div class="row">
-            <div class="col">
-                <div id="editorCode" class="editor__code"></div>
+            <div class="col-md-6">
+                <div id="codeEditor" class="editor-code"></div>
+            </div>
+            <div class="col-md-6">
+                <h5>Input</h5>
+                <textarea class="input"></textarea>
+                <h5>Output</h5>
+                <textarea class="output"></textarea>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="row">
-                    <div class="col button__layout">
-                        <button id="run" type="button" class="btn btn-success">Run ></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <button id="reset" type="button" class="btn btn-primary">Reset ></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-10">
-              <textarea class="output"></textarea>
-            </div>
+        <div class="row button-row">
+            <button id="run" type="button" class="btn btn-success button-layout">Run ></button>
+            <button id="reset" type="button" class="btn btn-primary button-layout">Reset ></button>
         </div>
     </div>
 
