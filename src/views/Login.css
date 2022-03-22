@@ -1,0 +1,15 @@
+.layout{
+    margin: 100px 0 0 0;
+}
+.row-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-style: italic;
+}
+.button-layout{
+    display: flex;
+    justify-content: flex-end;
+}

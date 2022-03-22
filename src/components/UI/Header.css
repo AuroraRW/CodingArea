@@ -1,0 +1,30 @@
+.nav-background {
+    background-color:rgb(100, 2, 129);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.nav-brand {
+    color:white;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+}
+.nav-brand:hover, .nav-brand:active {
+    color: white;
+    text-decoration: none;
+}
+.nav-links-layout{
+    display: flex;
+    justify-content: right;
+    align-items:center;
+}
+.nav-links{
+    color:white;
+}
+
+.nav-links:hover, .nav-links:active {
+    color: black;
+    text-decoration: none;
+}

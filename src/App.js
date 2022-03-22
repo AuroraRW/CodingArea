@@ -3,7 +3,6 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import SignUp from './views/SignUp'
 import Login from './views/Login'
-import Home from './views/Home'
 import Interviewer from './views/Interviewer/Interviewer'
 import Create from './views/Interviewer/Create'
 import Result from './views/Interviewer/Result'
@@ -40,7 +39,7 @@ export default function App() {
           <Developer />
         </Route>
         <Route path="/">
-          <Home />
+          <Login />
         </Route>
       </Switch>
     </Router>
